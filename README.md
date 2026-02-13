@@ -291,6 +291,25 @@ Audio Clipping or Distortion
 
 If the feedback sounds are too loud or distorted, lower the "Master" volume in alsamixer -D softvol below 70%.
 
+## 📺 Project Showcase (Video Demos)
+
+---
+
+See the Wyoming Satellite in action! These short clips demonstrate the response time and integration with Home Assistant:
+
+
+<p align="center">
+<a href="https://youtube.com/shorts/ag_uql1x-wI">
+<img src="https://img.youtube.com/vi/ag_uql1x-wI/0.jpg" alt="Demo 1" width="250" style="margin: 10px;"/>
+</a>
+<a href="https://youtube.com/shorts/bD9Pid_7iNs">
+<img src="https://img.youtube.com/vi/bD9Pid_7iNs/0.jpg" alt="Demo 2" width="250" style="margin: 10px;"/>
+</a>
+<a href="https://youtube.com/shorts/CC92k0u0qHU">
+<img src="https://img.youtube.com/vi/CC92k0u0qHU/0.jpg" alt="Demo 3" width="250" style="margin: 10px;"/>
+</a>
+</p>
+
 
 # 📄 License
 
