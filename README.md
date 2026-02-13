@@ -23,7 +23,7 @@ To ensure the I2S interface works correctly, connect your components to the foll
 ```Component	Pin Label	    
                                 Raspberry Pi GPIO	     Physical Pin
 MAX98357A (DAC)	  LRC	          GPIO 19	               Pin 35 (PCM_FS)
-                  BCLK	        GPIO 18	               Pin 12 (PCM_CLK)
+                  BCLK	          GPIO 18	               Pin 12 (PCM_CLK)
                   DIN	          GPIO 21	               Pin 40 (PCM_DOUT)
                   Vin	5V	      Pin 2 or 4
                   GND	          GND	Pin 6 or 9
@@ -31,7 +31,7 @@ MAX98357A (DAC)	  LRC	          GPIO 19	               Pin 35 (PCM_FS)
 INMP441 (Mic)	    WS	          GPIO 19	               Pin 35 (PCM_FS)
                   SCK	          GPIO 18	               Pin 12 (PCM_CLK)
                   SD	          GPIO 20	               Pin 38 (PCM_DIN)
-                  VCC	3.3V	    Pin 1 or 17
+                  VCC	3.3V	  Pin 1 or 17
                   L/R	GND	Set to GND for Left Channel
 ```
 <p align="center">
