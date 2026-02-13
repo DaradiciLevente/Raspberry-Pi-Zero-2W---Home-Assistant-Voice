@@ -77,7 +77,40 @@ Reboot your Pi after saving this file.
 
 Since the DAC lacks hardware volume control, we use a softvol (software volume) device. This file also enables full-duplex audio (simultaneous mic and speaker).
 
-Important: Use the asound.conf file provided in this repository to replace your /etc/asound.conf.
+Important: Use the asound.conf file provided in this repository to replace your /etc/asound.conf. ```sudo nano /etc/asound.conf```
+
+
+```
+pcm.mic {
+    type hw
+    card 0
+    device 0
+    format "S32_LE"
+    channels 1
+    rate 16000
+}
+
+pcm.dac {
+    type hw
+    card 0
+    device 0
+}
+
+pcm.softvol {
+    type softvol
+    slave.pcm "dac"
+    control {
+        name "Master"
+        card 0
+    }
+}
+
+pcm.!default {
+    type asym
+    playback.pcm "softvol"
+    capture.pcm "mic"
+}
+```
 
 
 ## 🛰️ 4. Wyoming Satellite Setup
