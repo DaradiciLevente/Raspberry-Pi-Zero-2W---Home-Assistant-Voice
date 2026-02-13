@@ -46,13 +46,6 @@ INMP441 (Mic)	  WS	          GPIO 19	               Pin 35 (PCM_FS)
                   L/R	GND	Set to GND for Left Channel
 ```
 
-Component,Pin Label,Raspberry Pi GPIO,Physical Pin
-MAX98357A (DAC),LRC,GPIO 19,Pin 35 (PCM_FS)
-,BCLK,GPIO 18,Pin 12 (PCM_CLK)
-,DIN,GPIO 21,Pin 40 (PCM_DOUT)
-INMP441 (Mic),WS,GPIO 19,Pin 35 (PCM_FS)
-,SCK,GPIO 18,Pin 12 (PCM_CLK)
-,SD,GPIO 20,Pin 38 (PCM_DIN)
 
 ### 💾 Software Installation & Configuration
 
