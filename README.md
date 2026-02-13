@@ -8,17 +8,26 @@
 This repository provides a step-by-step guide and all necessary configuration files to build a high-performance, standalone voice satellite for Home Assistant using the Wyoming protocol.
 ---
 
-🛠️ Hardware Stack
-### Computing: Raspberry Pi Zero 2W
+### 🛠️ Hardware Stack
+
 ---
+
+Computing: Raspberry Pi Zero 2W
+
 
 Audio Output (DAC): MAX98357A (I2S Mono Amplifier)
 
+
 Audio Input (Microphone): INMP441 (I2S Omnidirectional)
+
 
 Interface: I2S Digital Audio
 
-📐 Hardware Wiring (Pinout)
+
+### 📐 Hardware Wiring (Pinout)
+
+---
+
 To ensure the I2S interface works correctly, connect your components to the following GPIO pins:
 
 ```Component	Pin Label	    
