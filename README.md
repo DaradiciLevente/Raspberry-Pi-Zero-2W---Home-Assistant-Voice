@@ -22,7 +22,7 @@ To ensure the I2S interface works correctly, connect your components to the foll
 
 ```Component	Pin Label	    
                                 Raspberry Pi GPIO	     Physical Pin
-MAX98357A (DAC)	  LRC	         GPIO 19	                 Pin 35 (PCM_FS)
+MAX98357A (DAC)	  LRC	          GPIO 19	               Pin 35 (PCM_FS)
                   BCLK	          GPIO 18	               Pin 12 (PCM_CLK)
                   DIN	          GPIO 21	               Pin 40 (PCM_DOUT)
                   Vin	          5V	                   Pin 2 or 4
