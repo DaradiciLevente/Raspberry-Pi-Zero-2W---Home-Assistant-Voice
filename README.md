@@ -65,6 +65,11 @@ sudo apt install -y git python3-pip python3-venv alsa-utils alsa-tools sox libso
 Edit the config file to enable the I2S interface and the specific audio overlay:
 
 ```
+sudo nano /boot/firmware/config.txt
+```
+
+
+```
 dtparam=i2s=on
 dtparam=audio=off
 dtoverlay=max98357a
