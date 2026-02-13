@@ -46,6 +46,13 @@ INMP441 (Mic)	  WS	          GPIO 19	               Pin 35 (PCM_FS)
                   L/R	GND	Set to GND for Left Channel
 ```
 
+Component,Pin Label,Raspberry Pi GPIO,Physical Pin
+MAX98357A (DAC),LRC,GPIO 19,Pin 35 (PCM_FS)
+,BCLK,GPIO 18,Pin 12 (PCM_CLK)
+,DIN,GPIO 21,Pin 40 (PCM_DOUT)
+INMP441 (Mic),WS,GPIO 19,Pin 35 (PCM_FS)
+,SCK,GPIO 18,Pin 12 (PCM_CLK)
+,SD,GPIO 20,Pin 38 (PCM_DIN)
 
 ### 💾 Software Installation & Configuration
 
@@ -242,4 +249,59 @@ To stop it: ```sudo systemctl stop wyoming-satellite.service```
 To see live logs (Troubleshooting): ```journalctl -u wyoming-satellite.service -f```
 
 
+### 🏠 8. Integrating with Home Assistant
+
+---
+
+Once the service is running, it's time to connect it to your Home Assistant instance:
+
+
+Discovery: Home Assistant should automatically discover the satellite via the Wyoming integration. 
+Go to Settings > Devices & Services.
+
+
+Manual Add: If it doesn't appear, click Add Integration, search for Wyoming, and enter the IP address of your Raspberry Pi and port 10700.
+
+
+Voice Assistant Setup: * Go to Settings > Voice Assistants.
+
+
+Create a new pipeline or edit the existing one.
+
+
+Select your preferred STT (Speech-to-Text), TTS (Text-to-Speech), and Conversation Agent (e.g., Assist or Gemini).
+
+
+### 🛠️ Troubleshooting (Common Issues)
+
+---
+
+No Sound or Microphone Not Working?
+
+Check if the cards are detected by the system:
+
+
+```
+aplay -l   # List playback devices
+arecord -l # List recording devices
+```
+
+If you don't see sndrpigooglevoi, check your wiring and ensure config.txt is correct.
+
+
+"Device or resource busy"
+
+This usually means another process is using the audio card. Ensure you don't have PulseAudio or another media player running in the background.
+
+
+Audio Clipping or Distortion
+
+If the feedback sounds are too loud or distorted, lower the "Master" volume in alsamixer -D softvol below 70%.
+
+
+### 📄 License
+
+---
+
+This project is open-source. Feel free to use and modify it for your smart home setup!
 
