@@ -20,17 +20,24 @@ Interface: I2S Digital Audio
 📐 Hardware Wiring (Pinout)
 To ensure the I2S interface works correctly, connect your components to the following GPIO pins:
 
-Component	Pin Label	Raspberry Pi GPIO	Physical Pin
-MAX98357A (DAC)	LRC	GPIO 19	Pin 35 (PCM_FS)
-BCLK	GPIO 18	Pin 12 (PCM_CLK)
-DIN	GPIO 21	Pin 40 (PCM_DOUT)
-Vin	5V	Pin 2 or 4
-GND	GND	Pin 6 or 9
-INMP441 (Mic)	WS	GPIO 19	Pin 35 (PCM_FS)
-SCK	GPIO 18	Pin 12 (PCM_CLK)
-SD	GPIO 20	Pin 38 (PCM_DIN)
-VCC	3.3V	Pin 1 or 17
-L/R	GND	Set to GND for Left Channel
+Component	Pin Label	    
+                                Raspberry Pi GPIO	     Physical Pin
+MAX98357A (DAC)	  LRC	          GPIO 19	               Pin 35 (PCM_FS)
+                  BCLK	        GPIO 18	               Pin 12 (PCM_CLK)
+                  DIN	          GPIO 21	               Pin 40 (PCM_DOUT)
+                  Vin	5V	      Pin 2 or 4
+                  GND	          GND	Pin 6 or 9
+                  
+INMP441 (Mic)	    WS	          GPIO 19	               Pin 35 (PCM_FS)
+                  SCK	          GPIO 18	               Pin 12 (PCM_CLK)
+                  SD	          GPIO 20	               Pin 38 (PCM_DIN)
+                  VCC	3.3V	    Pin 1 or 17
+                  L/R	GND	Set to GND for Left Channel
+
+<p align="center">
+  <img src="assets/pinout.png" alt="pinout" width="300"/>
+</p>
+
 💾 Software Installation & Configuration
 1. System Preparation
 Start with Raspberry Pi OS Lite (64-bit). Install the required audio utilities and Python dependencies:
