@@ -1,7 +1,7 @@
 <h1 align="center">🎙️ DIY Wyoming Satellite - Raspberry Pi Zero 2W </h1>
 
 <p align="center">
-  <img src="assets/logo.png" alt="Logo" width="300"/>
+  <img src="assets/logo2.png" alt="Logo" width="300"/>
 </p>
 
 
