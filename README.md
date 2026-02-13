@@ -25,8 +25,8 @@ To ensure the I2S interface works correctly, connect your components to the foll
 MAX98357A (DAC)	  LRC	          GPIO 19	               Pin 35 (PCM_FS)
                   BCLK	          GPIO 18	               Pin 12 (PCM_CLK)
                   DIN	          GPIO 21	               Pin 40 (PCM_DOUT)
-                  Vin	5V	      Pin 2 or 4
-                  GND	          GND	Pin 6 or 9
+                  Vin	          5V	                   Pin 2 or 4
+                  GND	          GND	                   Pin 6 or 9
                   
 INMP441 (Mic)	  WS	            GPIO 19	               Pin 35 (PCM_FS)
                   SCK	          GPIO 18	               Pin 12 (PCM_CLK)
