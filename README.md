@@ -28,7 +28,7 @@ MAX98357A (DAC)	  LRC	          GPIO 19	               Pin 35 (PCM_FS)
                   Vin	          5V	                   Pin 2 or 4
                   GND	          GND	                   Pin 6 or 9
                   
-INMP441 (Mic)	  WS	          GPIO 19	                 Pin 35 (PCM_FS)
+INMP441 (Mic)	  WS	          GPIO 19	               Pin 35 (PCM_FS)
                   SCK	          GPIO 18	               Pin 12 (PCM_CLK)
                   SD	          GPIO 20	               Pin 38 (PCM_DIN)
                   VCC	3.3V	  Pin 1 or 17
