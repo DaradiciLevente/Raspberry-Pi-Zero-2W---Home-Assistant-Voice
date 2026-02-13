@@ -198,7 +198,9 @@ Set the "Master" level to approximately 60-70% (to avoid distortion).
 Save the settings permanently: ```sudo alsactl store``` or ```alsamixer```
 
 
-###🚀 7. Activating the Service (Systemd)
+### 🚀 7. Activating the Service (Systemd)
+
+---
 
 After creating the wyoming-satellite.service file, you need to tell Linux to recognize it, enable it for auto-start, and finally start it. 
 Run these commands:
@@ -224,6 +226,20 @@ sudo systemctl start wyoming-satellite.service
 sudo systemctl status wyoming-satellite.service
 ```
 
+### 🔄 Managing the Service
+
+---
+
+If you make changes to asound.conf or the service arguments (like changing the volume or the name of the satellite), use these commands:
+
+
+To apply changes: ```sudo systemctl restart wyoming-satellite.service```
+
+
+To stop it: ```sudo systemctl stop wyoming-satellite.service```
+
+
+To see live logs (Troubleshooting): ```journalctl -u wyoming-satellite.service -f```
 
 
 
