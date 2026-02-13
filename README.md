@@ -5,7 +5,7 @@
 </p>
 
 
-This repository provides a step-by-step guide and all necessary configuration files to build a high-performance, standalone voice satellite for Home Assistant using the Wyoming protocol.
+# This repository provides a step-by-step guide and all necessary configuration files to build a high-performance, standalone voice satellite for Home Assistant using the Wyoming protocol.
 ---
 
 ### 🛠️ Hardware Stack
