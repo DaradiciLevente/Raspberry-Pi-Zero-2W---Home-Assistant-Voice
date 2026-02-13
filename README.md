@@ -5,10 +5,10 @@
 </p>
 
 
-# This repository provides a step-by-step guide and all necessary configuration files to build a high-performance, standalone voice satellite for Home Assistant using the Wyoming protocol.
+### This repository provides a step-by-step guide and all necessary configuration files to build a high-performance, standalone voice satellite for Home Assistant using the Wyoming protocol.
 ---
 
-### 🛠️ Hardware Stack
+# 🛠️ Hardware Stack
 
 ---
 
@@ -24,7 +24,7 @@ Audio Input (Microphone): INMP441 (I2S Omnidirectional)
 Interface: I2S Digital Audio
 
 
-### 📐 Hardware Wiring (Pinout)
+# 📐 Hardware Wiring (Pinout)
 
 ---
 
@@ -47,7 +47,7 @@ INMP441 (Mic)	  WS	          GPIO 19	               Pin 35 (PCM_FS)
 ```
 
 
-### 💾 Software Installation & Configuration
+# 💾 Software Installation & Configuration
 
 ---
 
@@ -198,7 +198,7 @@ Set the "Master" level to approximately 60-70% (to avoid distortion).
 Save the settings permanently: ```sudo alsactl store``` or ```alsamixer```
 
 
-### 🚀 7. Activating the Service (Systemd)
+## 🚀 7. Activating the Service (Systemd)
 
 ---
 
@@ -226,7 +226,7 @@ sudo systemctl start wyoming-satellite.service
 sudo systemctl status wyoming-satellite.service
 ```
 
-### 🔄 Managing the Service
+# 🔄 Managing the Service
 
 ---
 
@@ -242,7 +242,7 @@ To stop it: ```sudo systemctl stop wyoming-satellite.service```
 To see live logs (Troubleshooting): ```journalctl -u wyoming-satellite.service -f```
 
 
-### 🏠 8. Integrating with Home Assistant
+# 🏠 8. Integrating with Home Assistant
 
 ---
 
@@ -265,7 +265,7 @@ Create a new pipeline or edit the existing one.
 Select your preferred STT (Speech-to-Text), TTS (Text-to-Speech), and Conversation Agent (e.g., Assist or Gemini).
 
 
-### 🛠️ Troubleshooting (Common Issues)
+# 🛠️ Troubleshooting (Common Issues)
 
 ---
 
@@ -292,7 +292,7 @@ Audio Clipping or Distortion
 If the feedback sounds are too loud or distorted, lower the "Master" volume in alsamixer -D softvol below 70%.
 
 
-### 📄 License
+# 📄 License
 
 ---
 
