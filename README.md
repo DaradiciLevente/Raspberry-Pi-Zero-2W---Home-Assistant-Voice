@@ -192,10 +192,38 @@ After starting the service, you must calibrate the volume level:
 
 Open the mixer: ```alsamixer -D softvol```
 
-
 Set the "Master" level to approximately 60-70% (to avoid distortion).
 
 
 Save the settings permanently: ```sudo alsactl store```
+
+
+###🚀 7. Activating the Service (Systemd)
+
+After creating the wyoming-satellite.service file, you need to tell Linux to recognize it, enable it for auto-start, and finally start it. 
+Run these commands:
+
+
+```
+# 1. Reload the systemd manager configuration to recognize the new service
+sudo systemctl daemon-reload
+```
+
+```
+# 2. Enable the service to start automatically on every boot
+sudo systemctl enable wyoming-satellite.service
+```
+
+```
+# 3. Start the service now
+sudo systemctl start wyoming-satellite.service
+```
+
+```
+# 4. Check the status to see if it's running correctly (Active: active (running))
+sudo systemctl status wyoming-satellite.service
+```
+
+
 
 
