@@ -4,7 +4,7 @@
   <img src="assets/logo.png" alt="Logo" width="300"/>
 </p>
 
-
+---
 This repository provides a step-by-step guide and all necessary configuration files to build a high-performance, standalone voice satellite for Home Assistant using the Wyoming protocol.
 ---
 
