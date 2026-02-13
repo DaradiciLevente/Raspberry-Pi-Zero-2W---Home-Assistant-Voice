@@ -82,7 +82,9 @@ Reboot your Pi after saving this file.
 
 Since the DAC lacks hardware volume control, we use a softvol (software volume) device. This file also enables full-duplex audio (simultaneous mic and speaker).
 
-Important: Use the asound.conf file provided in this repository to replace your /etc/asound.conf. ```sudo nano /etc/asound.conf```
+Important: Use the asound.conf file provided in this repository to replace your /etc/asound.conf. 
+
+```sudo nano /etc/asound.conf```
 
 
 ```
