@@ -1,0 +1,18 @@
+[Unit]
+Description=Wyoming Satellite
+After=network-online.target sound.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/levente/wyoming/bin/python3 -m wyoming_satellite \
+  --name "PiZero2W" \
+  --uri tcp://0.0.0.0:10700 \
+  --mic-command "arecord -D plughw:CARD=sndrpigooglevoi,DEV=0 -r 16000 -c 1 -f S16_LE -t raw" \
+  --snd-command "aplay -D plug:softvol -r 22050 -c 1 -f S16_LE -t raw" \
+  --awake-wav "/home/levente/sounds/wake.wav" \
+  --done-wav "/home/levente/sounds/done.wav" \
+  --debug
+
+[Install]
+WantedBy=multi-user.target
