@@ -195,7 +195,7 @@ Open the mixer: ```alsamixer -D softvol```
 Set the "Master" level to approximately 60-70% (to avoid distortion).
 
 
-Save the settings permanently: ```sudo alsactl store```
+Save the settings permanently: ```sudo alsactl store``` or ```alsamixer```
 
 
 ###🚀 7. Activating the Service (Systemd)
