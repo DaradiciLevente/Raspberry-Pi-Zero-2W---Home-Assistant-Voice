@@ -1,7 +1,7 @@
 <h1 align="center">🎙️ DIY Wyoming Satellite - Raspberry Pi Zero 2W</h1>
 
 <p align="center">
-  <img src="assets/logo.png" alt="ESP32 Logo" width="300"/>
+  <img src="assets/logo.png" alt="Logo" width="300"/>
 </p>
 
 
@@ -66,6 +66,8 @@ Edit the config file to enable the I2S interface and the specific audio overlay:
 
 ```
 dtparam=i2s=on
+dtparam=audio=off
+dtoverlay=max98357a
 dtoverlay=googlevoicehat-soundcard
 ```
 
