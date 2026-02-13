@@ -1,0 +1,7 @@
+dtparam=i2s=on
+# Dezactivează audio onboard dacă nu îl folosești pentru a evita conflicte
+dtparam=audio=off
+# Overlay-ul magic pentru DAC-ul MAX98357A
+dtoverlay=max98357a
+# Overlay-ul pentru microfonul I2S
+dtoverlay=googlevoicehat-soundcard
