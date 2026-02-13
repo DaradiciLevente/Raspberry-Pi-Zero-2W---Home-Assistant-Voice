@@ -47,59 +47,92 @@ INMP441 (Mic)	  WS	          GPIO 19	               Pin 35 (PCM_FS)
 ```
 
 
-💾 Software Installation & Configuration
-1. System Preparation
+### 💾 Software Installation & Configuration
+
+---
+
+## 1. System Preparation
+
 Start with Raspberry Pi OS Lite (64-bit). Install the required audio utilities and Python dependencies:
 
-Bash
+```
 sudo apt update
 sudo apt install -y git python3-pip python3-venv alsa-utils alsa-tools sox libsox-fmt-all python3-pyaudio python3-numpy swh-plugins raspi-gpio
-2. Enable I2S Audio (/boot/firmware/config.txt)
+```
+
+## 2. Enable I2S Audio (/boot/firmware/config.txt)
+
 Edit the config file to enable the I2S interface and the specific audio overlay:
 
-Plaintext
+```
 dtparam=i2s=on
 dtoverlay=googlevoicehat-soundcard
+```
+
 Reboot your Pi after saving this file.
 
-3. Audio Architecture (/etc/asound.conf)
+## 3. Audio Architecture (/etc/asound.conf)
+
 Since the DAC lacks hardware volume control, we use a softvol (software volume) device. This file also enables full-duplex audio (simultaneous mic and speaker).
 
 Important: Use the asound.conf file provided in this repository to replace your /etc/asound.conf.
 
-🛰️ 4. Wyoming Satellite Setup
+
+## 🛰️ 4. Wyoming Satellite Setup
+
 Installation via Python Virtual Environment
+
 Install the latest version of the Wyoming Satellite using a virtual environment:
 
-Bash
+
+```
 python3 -m venv ~/wyoming
 ~/wyoming/bin/pip3 install --upgrade pip
 ~/wyoming/bin/pip3 install wyoming-satellite
-🔊 5. Feedback Sounds
+```
+
+## 🔊 5. Feedback Sounds
+
 The satellite requires local .wav files for "wake" and "done" sounds to ensure zero-latency audio feedback.
 
-Bash
+
+```
 mkdir -p /home/levente/sounds
 cd /home/levente/sounds
 
 # Download official Rhasspy/Wyoming sounds
 wget https://github.com/rhasspy/wyoming-satellite/raw/master/sounds/awake.wav -O wake.wav
 wget https://github.com/rhasspy/wyoming-satellite/raw/master/sounds/done.wav -O done.wav
+```
+
 Note: If your username is not levente, update the paths in the service file accordingly.
 
-🚀 6. Auto-Start Service
+
+## 🚀 6. Auto-Start Service
+
 To make the satellite run automatically on boot, create a systemd service:
+
+```
 sudo nano /etc/systemd/system/wyoming-satellite.service
+```
 
 Copy the service configuration from this repository. It is pre-configured to handle the specific arecord and aplay commands for your I2S hardware.
 
-🔧 Calibration & Testing
+
+## 🔧 Calibration & Testing
+
+---
+
+
 After starting the service, you must calibrate the volume level:
 
-Open the mixer: alsamixer -D softvol
+
+Open the mixer: ```alsamixer -D softvol```
+
 
 Set the "Master" level to approximately 60-70% (to avoid distortion).
 
-Save the settings permanently: sudo alsactl store
 
-Would you like me to help you write the asound.conf or the .service file content specifically for the GitHub upload now?
+Save the settings permanently: ```sudo alsactl store```
+
+
