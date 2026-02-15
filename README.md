@@ -12,10 +12,10 @@
 
 ---
 
-Computing: Raspberry Pi Zero 2W
+- ** Computing: Raspberry Pi Zero 2W
 
 
-Audio Output (DAC): MAX98357A (I2S Mono Amplifier)
+- ** Audio Output (DAC): MAX98357A (I2S Mono Amplifier)
 
 
 Audio Input (Microphone): INMP441 (I2S Omnidirectional)
