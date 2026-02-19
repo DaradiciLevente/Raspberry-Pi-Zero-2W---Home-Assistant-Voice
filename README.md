@@ -190,12 +190,12 @@ Copy the service configuration from this repository. It is pre-configured to han
 After starting the service, you must calibrate the volume level:
 
 
-Open the mixer: ```alsamixer -D softvol```
+Open the mixer: ```alsamixer -D softvol``` or ```alsamixer```
 
 Set the "Master" level to approximately 60-70% (to avoid distortion).
 
 
-Save the settings permanently: ```sudo alsactl store``` or ```alsamixer```
+Save the settings permanently: ```sudo alsactl store``` 
 
 
 ## 🚀 7. Activating the Service (Systemd)
